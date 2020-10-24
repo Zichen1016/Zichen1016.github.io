@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, "PingFang SC", "Micrsoft Yahei", sans-serif; /* 英文 中文 Windows 保底sans-serif */
-    font-size: 14px;
+    /* font-size: 14px; */
 }
 
 img {
@@ -130,4 +130,127 @@ header .burger {
     margin: 0 10px;
     width: 15px;
     height: 15px;
+}
+
+/* 内容样式 */
+/* 通用样式 */
+
+.content-wrapper { 
+    display: flex; /* 栅格布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    flex-direction: column; /* 按列的方式布局 垂直*/
+}
+
+section {
+    display: grid; /* 默认栅格布局 */
+    /* 单元格都居中对齐 */
+    justify-items: center; /* 每个列的对齐方式 */
+    max-width: 1180px; /* 最大宽度 */
+    padding: 0 80px;
+}
+
+.title1 {
+    font-size: 28px;
+    color: var(--text-color-darker);
+}
+
+.intro {
+    margin: 28px 0 60px 0;
+    font-size: 18px;
+    color: var(--text-color-dark-gray);
+}
+
+.about-us {
+    padding-bottom: 32px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列 */
+    grid-template-rows: 126px 126px; /* 2行 */
+    column-gap: 5vw; /* 每列之间空隙5%浏览器宽*/
+}
+
+.feature {
+    display: grid;
+    grid-template-areas: 
+        "icon title" 
+        "icon content"; /* 自定义模板*/
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.feature i.fas {
+    grid-area: icon;
+    font-size: 34px;
+    color: var(--primary-color);
+}
+
+.tetile {
+    margin: 90px 0 0 0;
+    font-size: 45px;
+}
+
+.author {
+    margin: 45px 0 0 0;
+    font-size: 30px;
+}
+
+.theme .text {
+    margin: 45px 0 0 0;
+    text-align: left;
+    font-size: 40px;
+    text-indent: 2em; /* 开头缩进 */
+    line-height: 2em; /* 行高 */
+}
+
+.theme {
+    padding-bottom: 40px;
+}
+
+.nine-picture {
+    max-width: unset; /* 还原最大宽度 */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.nine-picture .pictures {
+    width: 81vw;
+}
+
+.nine-picture .pictures .picture {
+    float: left;
+    padding: 30px 30px 30px 30px;
+    width: 27vw; /* 根据浏览器比例设置图片外面的容器宽高 */
+    height: 19.3vw;
+    overflow: hidden; /* 超出的部分不可见 */
+}
+
+.nine-picture .pictures .picture img {
+    height: 100%;
+    object-fit: cover; /* 自动等比例缩放 */
+}
+
+.transition-picture {
+    max-width: unset; /* 还原最大宽度 */
+    padding-top: 220px;
+    padding-bottom: 220px;
+}
+
+.transition-picture .pictures {
+    margin: 0 auto;
+}
+
+.transition-picture .pictures .picture {
+    float: left;
+    margin: 0 100px;
+    width: 25vw; /* 根据浏览器比例设置图片外面的容器宽高 */
+    height: 18vw;
+    overflow: hidden; /* 超出的部分不可见 */
+}
+
+.transition-picture .pictures .picture img {
+    height: 100%;
+    object-fit: cover; /* 自动等比例缩放 */
 }
