@@ -150,41 +150,18 @@ section {
     padding: 0 80px;
 }
 
-.title1 {
-    font-size: 28px;
-    color: var(--text-color-darker);
+.section-bj {
+    position: relative;
 }
-
-.intro {
-    margin: 28px 0 60px 0;
-    font-size: 18px;
-    color: var(--text-color-dark-gray);
-}
-
-.about-us {
-    padding-bottom: 32px;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3列 */
-    grid-template-rows: 126px 126px; /* 2行 */
-    column-gap: 5vw; /* 每列之间空隙5%浏览器宽*/
-}
-
-.feature {
-    display: grid;
-    grid-template-areas: 
-        "icon title" 
-        "icon content"; /* 自定义模板*/
-    grid-template-columns: 60px 1fr;
-    grid-template-rows: 1fr 3fr;
-}
-
-.feature i.fas {
-    grid-area: icon;
-    font-size: 34px;
-    color: var(--primary-color);
+/* 灰色背景 */
+.section-bj::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #e4e4e4;
+    width: 100vw;
+    height: 100%;
+    z-index: -1; /* 放在最下面 */
 }
 
 .tetile {
@@ -234,18 +211,24 @@ section {
 
 .transition-picture {
     max-width: unset; /* 还原最大宽度 */
-    padding-top: 220px;
-    padding-bottom: 220px;
+    padding-top: 150px;
+    margin: 100px 0;
+    padding-bottom: 150px;
+    display: grid;
+    justify-items: center;
 }
 
 .transition-picture .pictures {
-    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;    
 }
 
 .transition-picture .pictures .picture {
-    float: left;
-    margin: 0 100px;
-    width: 25vw; /* 根据浏览器比例设置图片外面的容器宽高 */
+    float: left; 
+    margin: 0 5vw;
+    width: 28vw; /* 根据浏览器比例设置图片外面的容器宽高 */
     height: 18vw;
     overflow: hidden; /* 超出的部分不可见 */
 }
@@ -253,4 +236,97 @@ section {
 .transition-picture .pictures .picture img {
     height: 100%;
     object-fit: cover; /* 自动等比例缩放 */
+}
+
+/* 文本混排 */
+.content {
+    max-width: unset;
+    padding: 60px 10.1vw;
+}
+
+.mixed-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.mixed-row .text {
+    font-size: 50px;
+    padding: 60px 0;
+    text-align: left;
+    text-indent: 2em; /* 开头缩进 */
+    line-height: 1.5em; /* 行高 */
+}
+
+.mixed-row img {
+    padding: 40px 60px;
+    width: 100%;
+    position: relative;
+}
+
+/* End文本 */
+.end-text {
+    max-width: unset;
+    padding: 50px 10.1vw;
+    font-size: 90px;
+}
+
+.end-text .text {
+    text-align: left;
+    text-indent: 2em; /* 开头缩进 */
+    line-height: 1.5em; /* 行高 */
+    font-size: 56px;
+    padding-bottom: 100px;
+}
+
+/* 底部信息 */
+footer {
+    margin-top: 72px;
+    background-color: #414141;
+}
+
+.contact-me {
+   font-size: 20px;
+   color: white;
+   text-align: center;
+   padding-top: 130px;
+   padding-bottom: 130px;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-me a:hover {
+    color: #76bafa;
+    border-bottom: solid 1px;
+}
+
+.rights {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/* 返回顶部 */
+.scrollToTop a {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: white; /* 向下的箭头 */
+    text-decoration: none; /* 去掉下划线 */
+    position: fixed; /* 绝对定位 */
+    bottom: 60px;
+    right: 30px;
 }
