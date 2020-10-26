@@ -22,30 +22,28 @@ img {
     --backdrop-color: rgba(42, 42, 42, 0.69);
 }   /* 网页通用的颜色 */
 /* 栅格布局 2列 */
-header {
-    width: 100vw; /* 占满整个浏览器的宽度 */
-    height: 80px;
-    display: grid; /* 栅格布局 */
-    padding: 0 40px;
-    /* 栅格的布局方式 */
-    grid-template-columns: 1fr 2fr; /* 第一列占1 第二列占2 */
-    align-items: center; /* 列垂直居中 */
-    position: relative; /* 相对定位 */
-    z-index: 200; /* 最顶部 */
-} 
 /* logo样式 */
 .logo {
     font-size: 24px;
     font-weight: 600; /* 加粗 */
     color: var(--text-color-lightest); /* var函数获取上面定义的变量 */
+    position: relative;
+    margin: 35px 0 0 45px;
+    z-index: 300;
 }
 /* 原本放在第二列的最左边 导航菜单放在最右边 */
-header nav {
-    justify-self: end; 
-}
-/* 搜索图标 */
-header nav i {
-    color: var(--text-color-lightest);
+header nav { 
+    width: 100%; /* 占满整个浏览器的宽度 */
+    height: 80px;
+    display: grid; /* 栅格布局 */
+    /* padding: 0 40px; */
+    /* 栅格的布局方式 */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 第一列占1 第二列占2 */
+    align-items: center; /* 列垂直居中 */
+    position: relative; /* 相对定位 */
+    z-index: 200; /* 最顶部 */
+    padding: 0 30vw;
+    top: -55px;
 }
 /* 导航链接颜色 */
 header nav a {
@@ -53,20 +51,16 @@ header nav a {
     text-decoration: none; /* 无下划线 */
     margin: 0 24px;
 }
-/* 隐藏折叠导航按钮 */
-header .burger {
-    display: none;
-}
 /* 整体的轮播组件样式 */
 .glide {
     position: relative; /* 相对于它的起点进行移动 后面的div不会占据原始的位置 */
-    top: -80px; /* 抵消导航高度 */
+    top: -143px; /* 抵消导航高 */
     z-index: 50;
 }
 /* 轮播的图片区域的大小 */
 /* 宽/高 占 100% 浏览器大小 */
 .glide__slide img {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     object-fit: cover; /* 自动等比例地缩放 */
 }
@@ -104,16 +98,17 @@ header .burger {
     opacity: 0;
 }
 
+/* 轮播遮罩层 */
 .backdrop {
     background: var(--backdrop-color);
-    z-index: 60;
+    opacity: 0.1;
     position: absolute;
+    left: 0;
     width: 100%;
     height: 100%;
-    left: 0;
-    right: 0;
-    opacity: 0.5; /* 透明度 */
-}
+    /* 放置在幻灯片上层 */
+    z-index: 60;
+  }
 
 .explore-btn {
     padding: 14px 32px;
