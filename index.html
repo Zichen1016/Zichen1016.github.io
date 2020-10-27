@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="libs/scrollReveal/scrollreveal.min.js"></script>
     <!-- font-awesome库 -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" />
     <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
@@ -114,10 +115,10 @@
     <div class="content-wrapper">
         
         <!-- 文本开头 -->
-        <section class="theme">
-            <h1 class="tetile">Man Is Here For The Sake of Other Men</h2>
-            <h3 class="author">Albert Einstein</h3>
-            <p class="text">
+        <section class="theme animation">
+            <h1 class="tetile animation">Man Is Here For The Sake of Other Men</h2>
+            <h3 class="author animation">Albert Einstein</h3>
+            <p class="text animation">
                    Strange is our situation here upon earth. Each of us
                 comes for a short visit, not knowing why, yet sometimes
                 seeming to divine a purpose.         
@@ -129,39 +130,39 @@
         <section class="nine-picture">
             <div class="pictures">
                 <!-- picture1 -->
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/nine-picture-01.jpg" alt="">
                 </div>
                 <!-- picture2 -->
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/nine-picture-02.jpg" alt="">
                 </div>
                 <!-- picture3 -->
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/nine-picture-03.jpg" alt="">
                 </div>
                 <!-- picture4 -->
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/nine-picture-04.jpg" alt="">
                 </div>
                 <!-- picture5 -->
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/nine-picture-05.jpg" alt="">
                 </div>
                 <!-- picture6 -->
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/nine-picture-06.jpg" alt="">
                 </div>
                 <!-- picture7 -->
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/nine-picture-07.jpg" alt="">
                 </div>
                 <!-- picture8 -->
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/nine-picture-08.jpg" alt="">
                 </div>
                 <!-- picture9 -->
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/nine-picture-09.jpg" alt="">
                 </div>
             </div>
@@ -171,10 +172,10 @@
         <!-- 过渡图片1 -->
         <section class="transition-picture section-bj">
             <div class="pictures">
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/transition-picture-01.jpg" alt="">
                 </div>
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/transition-picture-02.jpg" alt="">
                 </div>
             </div>
@@ -185,22 +186,22 @@
         <section class="content">     
             <div class="mixed-rows">
                 <div class="mixed-row">
-                    <p class="text">
+                    <p class="text animation">
                         From the standpoint of daily life, however, there is one thing we do know that man is here for the sake of other men — above all for those upon whose smile
                     </p>
-                    <img src="images/mixed-rows-01.jpg" alt="">
+                    <img class="animation" src="images/mixed-rows-01.jpg" alt="">
                 </div>
                 <div class="mixed-row">
-                    <img src="images/mixed-rows-02.jpg" alt="">
-                    <p class="text">
+                    <img class="animation" src="images/mixed-rows-02.jpg" alt="">
+                    <p class="text animation">
                         and well-being our own happiness depends, and also for the countless unknown souls with whose fate we are connected by a bond of sympathy.
                     </p>
                 </div>
                 <div class="mixed-row">
-                    <p class="text">
+                    <p class="text animation">
                         Many times a day I realize how much my own outer and inner life is built upon the labors of my fellow men, both living and dead, and how earnestly I must 
                     </p>
-                    <img src="images/mixed-rows-03.jpg" alt="">
+                    <img class="animation" src="images/mixed-rows-03.jpg" alt="">
                 </div>
                 <!-- <div class="mixed-row">
                     <img src="images/IMG_0581.jpg" alt="">
@@ -221,10 +222,10 @@
         <!-- 过渡图片2 -->
         <section class="transition-picture section-bj">
             <div class="pictures">
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/transition-picture-03.jpg" alt="">
                 </div>
-                <div class="picture">
+                <div class="picture animation">
                     <img src="images/transition-picture-04.jpg" alt="">
                 </div>
             </div>
@@ -233,10 +234,10 @@
 
         <!-- End文本 -->
         <section class="end-text">
-            <p class="text">
+            <p class="text animation">
                 exert myself in order to give in return as much as I have received. Many times a day I realize how much my own outer and inner life is built upon the labors of my fellow men, both living and dead, and how earnestly I must exert myself in order to give in return as much as I have received.         
             </p>
-            <p>End...</p>
+            <p class="animation">End...</p>
         </section>
         <!-- End文本 -->
 
@@ -251,7 +252,7 @@
 
             <!-- 联系方式 -->
             <div class="contact-information">
-                <p class="contact-me">
+                <p class="contact-me animation">
                     <a href="http://mail.qq.com" target="_blank">Email: zichen1016&#64;fox&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a> 
                 </p>
             </div>
@@ -270,12 +271,14 @@
             <!-- 返回顶部按钮 -->
 
         </div>
+
     </footer>
     <!-- 版权 -->
 
     <!-- 轮播组件初始化 -->
     <script src="libs/anime/anime.min.js"></script>
     <script src="libs/glide/glide.min.js"></script>
+    <script src="libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

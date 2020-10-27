@@ -20,3 +20,17 @@ glide.on("run.before", () => {
 });
 
 glide.mount(); // 把轮播组件加载
+
+// 从下到上移动元素出现
+const staggeringOption = {
+    delay: 300, /* 延迟300 出现 */ 
+    distance: "80px", /*从下到上移动100*/
+    duration: 500, /* 执行时间 */
+    easing: "ease-in-out",
+    origin: "bottom"
+};
+
+ScrollReveal().reveal(".animation", {...staggeringOption, intervall: 350});
+
+// 流畅返回顶部
+const scroll = new SmoothScroll('.scrollToTop a[href*="#"]')
